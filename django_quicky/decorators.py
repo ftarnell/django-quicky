@@ -129,7 +129,7 @@ def view(render_to=None, *args, **kwargs):
                                                 *decorator_args, **decorator_kwargs)
                         else:
                             return HttpResponse(json.dumps(response),
-                                                mimetype="application/json",
+                                                content_type="application/json",
                                                 *decorator_args, **decorator_kwargs)
                     if rendering == 'raw':
                         return HttpResponse(response,
